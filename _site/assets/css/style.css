@@ -921,3 +921,12 @@ a:hover {
   font-family: 'Open Sans Condensed', sans-serif;
   color: #dedede;
   font-weight: bold; }
+
+@media screen and (max-width: 1511px) {
+  .libraries-logo img {
+    background-image: url(/../../images/OULogoIcon.png);
+    background-repeat: no-repeat; } }
+@media screen and (min-width: 1512px) {
+  .libraries-logo img {
+    background-image: url(/../../images/ou_lib_logo100.png);
+    background-repeat: no-repeat; } }
