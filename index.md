@@ -33,10 +33,10 @@ OpenRefine (formerly Google Refine) is an open source software, which can help c
 ### Downloading OpenRefine
 Before we dive into to the software, we need to get both the tool and the data loaded onto our computer. 
 
-You can download the OpenRefine software from [http://openrefine.org/download.html](http://openrefine.org/download.html). There are Windows, Mac, Linux distrubtions available. 
+You can download the OpenRefine software from [http://openrefine.org/download.html](http://openrefine.org/download.html). There are Windows, Mac, Linux distributions available. 
 
 ### Getting the Data
-The data will be using comes from the [International Organization on Migration's Missing Migrants Project](https://missingmigrants.iom.int/). According to project's About page: 
+The data we will be using comes from the [International Organization on Migration's Missing Migrants Project](https://missingmigrants.iom.int/). According to project's About page: 
 > IOM's Missing Migrants Project tracks deaths of migrants, including refugees and asylum-seekers, who have gone missing along mixed migration routes worldwide. The research behind this project began with the October 2013 tragedies, when at least 368 individuals died in two shipwrecks near the Italian island of Lampedusa. Since then, Missing Migrants Project has developed into an important hub and advocacy source of information that media, researchers, and the general public access for the latest information" [https://missingmigrants.iom.int/about](https://missingmigrants.iom.int/about). 
 
 The data is made accesible through a Creative Commons Attribution 4.0 International License. 
@@ -61,7 +61,7 @@ To start a new project, select **Create Project** in the upper right corner. Not
 
 ![Creating a project](images/image_02.png)
 
-The next screen displays a preview of your data. Typically, OpenRefine does a pretty good job of parsing the data, but it is worthwhile toto look at the options at the bottom of the screen that are available if you need to change the parsing settings. For example, OpenRefine might try to read in comma deliminated files as tab deliminated. In that case, you would need to adjust the settings to force the system to parse by commas. 
+The next screen displays a preview of your data. Typically, OpenRefine does a pretty good job of parsing the data, but it is worthwhile to look at the options at the bottom of the screen that are available if you need to change the parsing settings. For example, OpenRefine might try to read in comma deliminated files as tab deliminated. In that case, you would need to adjust the settings to force the system to parse by commas. 
 
 You probably want to change the name of your project using the text box in the upper right corner. If you don't change it, the project will have the same name as the original file including the file extensions. I will go and remove the xlsx part from the title. 
 
