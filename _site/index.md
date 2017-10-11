@@ -26,19 +26,22 @@ Created by Sarah Clayton
 
 
 ## Introduction
-Open Refine (formerly Google Refine) is an open source software, which can help clean messy data. OpenRefine can't solve all of your messy data dilemmas, but it can make some of the processes much easier and quicker. This tutorial will walk you through some of the basics of the tool using real data.  
+OpenRefine (formerly Google Refine) is an open source software, which can help clean messy data. OpenRefine can't solve all of your messy data dilemmas, but it can make some of the processes quicker and easier. This tutorial will walk you through some of the basics of the tool using real data.  
 [Return to Top](#about)
 
 ## Getting Started
 ### Downloading OpenRefine
 Before we dive into to the software, we need to get both the tool and the data loaded onto our computer. 
 
-You can download the OpenRefine software from http://openrefine.org/download.html. There are Windows, Mac, Linux distrubtions avaiable. 
+You can download the OpenRefine software from [http://openrefine.org/download.html](http://openrefine.org/download.html). There are Windows, Mac, Linux distrubtions available. 
 
 ### Getting the Data
-The data will be using comes from the [International Organization on Migration's Missing Migrant Project](https://missingmigrants.iom.int/). According to project's About page: "IOM's Missing Migrants Project tracks deaths of migrants, including refugees and asylum-seekers, who have gone missing along mixed migration routes worldwide. The research behind this project began with the October 2013 tragedies, when at least 368 individuals died in two shipwrecks near the Italian island of Lampedusa. Since then, Missing Migrants Project has developed into an important hub and advocacy source of information that media, researchers, and the general public access for the latest information" (https://missingmigrants.iom.int/about). The data is all accesible through a Creative Commons Attribution 4.0 International License. 
+The data will be using comes from the [International Organization on Migration's Missing Migrants Project](https://missingmigrants.iom.int/). According to project's About page: 
+> IOM's Missing Migrants Project tracks deaths of migrants, including refugees and asylum-seekers, who have gone missing along mixed migration routes worldwide. The research behind this project began with the October 2013 tragedies, when at least 368 individuals died in two shipwrecks near the Italian island of Lampedusa. Since then, Missing Migrants Project has developed into an important hub and advocacy source of information that media, researchers, and the general public access for the latest information" [https://missingmigrants.iom.int/about](https://missingmigrants.iom.int/about). 
 
-You can download the data from the project site for different years, but we are going to download a spreadsheet with all the years combined from The Humanitarian Data Exchange. Go to https://data.humdata.org/dataset/migrant-deaths-by-month. Scroll down and download the Migrant Deaths by month excel file. Move it to a place on your computer where you can easily find it. I'll put mine on my desktop. 
+The data is made accesible through a Creative Commons Attribution 4.0 International License. 
+
+You can download the data from the project site for different years, but we are going to download a spreadsheet with all the years combined from The Humanitarian Data Exchange. Go to [https://data.humdata.org/dataset/migrant-deaths-by-month](https://data.humdata.org/dataset/migrant-deaths-by-month). Scroll down and download the Migrant Deaths by month excel file. Move it to a place on your computer where you can easily find it. I'll put mine on my desktop. 
 
 Open up the data to see what is in it. **What stands out to you that needs to be cleaned?**
 
@@ -54,9 +57,9 @@ To start a new project, select Create Project in the upper right corner. Notice 
 
 ![Creating a project](images/image_02.png)
 
-The next screen shows you a preview of your data.  Typically, OpenRefine does a pretty good job of parsing the data, but takes some time to look at the different options availabe if it doesn't. 
+The next screen displays a preview of your data. Typically, OpenRefine does a pretty good job of parsing the data, but it is worthwhile toto look at the options at the bottom of the screen that are available if you need to change the parsing settings. For example, OpenRefine might try to read in comma deliminated files as tab deliminated. In that case, you would need to adjust the settings to force the system to parse by commas. 
 
-You can also change the name of your project using the text box in the upper left corner. If you don't change it, the project will have the same name as the original file including the file extensions. I will go and remove the xlsx part from the title. 
+You probably want to change the name of your project using the text box in the upper right corner. If you don't change it, the project will have the same name as the original file including the file extensions. I will go and remove the xlsx part from the title. 
 
 Once you are ready, click Create Project in the upper right next to the title.
 
@@ -65,13 +68,12 @@ Once you are ready, click Create Project in the upper right next to the title.
 [Return to Top](#about)
 
 ## The Interface
-Let's take a few minutes to look at the interface. The OpenRefine window is divided into two sections separated by a light blue line. The smaller section on the left is for faceting and filter. At the top of the section, there is a Undo/Redo tab. In addition to letting us undo/redo actions, this tab will also let export a list of changes so we can repeat them later. 
-
+Let's take a few minutes to look at the interface. The OpenRefine window is divided into two sections separated by a light blue line. The smaller section on the left is for faceting and filtering. At the top of the section, there is a Undo/Redo tab. In addition to letting us undo/redo actions, this tab will also let export a list of changes so we can repeat them later. 
 ![first section](images/image_04.png)
 
 In the larger section, our data is displayed in a spreadsheet format. At the top, you should see that you have 2647 rows. Right below you can switch between rows and records. We will go into more details on this in the spilting cells section. You can also change to display to show up to 50 rows on the page. Go ahead and select 50 rows so we can see as much of our data as possible at once. 
 
-Each of the columns have a down arrow by their headers. Clicking on this arrow will reveal the different editing options. We will to the functionality of some but not all of these in the sections below. 
+Hovering over a column header will reveal a down arrow. Clicking on this arrow will reveal the different editing options. We will explore the functionality of some but not all of these during this tutorial. 
 
 ![second section](images/image_05.png)
 
@@ -81,23 +83,23 @@ Before we move on, I want to point out 3 buttons on the very top right corner of
 
 
 ## Data Types
-Data in OpenRefine is auto-sorted into one of three data types: text, numbers, or date. There are subtle color differences to indicate the different types - apologies to all the color-blind users. Looking at your data, you should see 4 columns with data in green. The #affected+missing, the #affected+dead, #geo+lat, and #geo+long. 
+Data in OpenRefine is auto-sorted into one of three data types: text, numbers, or date. There are subtle color differences to indicate the different types - apologies to all the color-blind users. Looking at your table, you should see 4 columns with data in green. The #affected+missing, the #affected+dead, #geo+lat, and #geo+long. 
 
-Different data types will have some slightly different functionality. So you may want to change the data type. As an example, we can change #date+reported to the date format. 
+Since each data types has some slightly different functionality, you may want to change the data type. As an example, we can change #date+reported to the date format. 
 
 Click the down arrow by #date+reported. Scroll to Edit cells. Select Common transformations. Finally select To date. 
 
-*Notice all the different options in common transformatons, including trimming whitespace, changing capitalization, and switching the data type. These can help you quickly make your data more useable.*
+*Notice all the different options in common transformatons including trimming whitespace, changing capitalization, and switching the data type. These can help you quickly make your data more useable.*
 
 ![transform data type](images/image_06.png)
 
-Now the data in the date field is also green, and they add a time stamp, which doesn't make sense for our data. However, it won't affect our analysis so we will just leave it as for now. We will want to change it back to a text before exporting it. 
+Now,the data in the date field is also green. A timestamp was also added, which doesn't really make sense for our data. However, it won't affect our analysis so we will just leave it as for now. We will want to change it back to a text before exporting it. 
 
 [Return to Top](#about)
 
 ## Filters and Facets
 ### Timeline Facet
-Before we start editting our date, we need to be able to understand it. OpenRefine has a several ways to facet our data that can give help us identify potenital problems. Let's start with the #date+reported column we have just transformed. 
+We can use tools in OpenRefine to help us quickly better understand our data. OpenRefine has a several ways to facet our data, which can give help us identify potenital problems. Let's start with the #date+reported column we have just transformed. 
 
 Click the down arrow next to #date+reported column and select Timeline facet.
 
@@ -107,25 +109,25 @@ After you have selected this, you should see a new box open in the Facet/Filter 
 
 ![Timeline Facet](images/image_08.png)
 
-Uncheck the box at the bottom of the facet that says blanks. This will filter out all of the rows with no date so they are not displayed in our data. 
+Uncheck the box at the bottom of the facet that says Blanks. This will filter out all of the rows with no date so they are not displayed in our data. 
 
-You can use the facet to adjust the data based on the date reported. On the left side of the box, there is a gray oval with two lines. Drag the oval until you are the date displayed at the bottom is in 2016. You should also see the number of matching rows descrease at the top of your spreadsheet. 
+You can use the facet to adjust the data based on the date reported. On the left side of the box, there is a gray oval with two lines. Drag the oval until the date displayed at the bottom is in 2016. After you do this, look at the number of matching rows at the top of the spreadsheet. This number should have decreased. 
 
 ![Filtered with Timeline](images/image_09.png)
 
 ### Number Facet
-We can also facet by our numerical data values. Let's try it with the #affected-missing column. Select the down arrow, Facet, and then Numeric Facet. 
+We can also facet by our numeric data values. Let's try it with the #affected-missing column. Select the down arrow, Facet, and then Numeric Facet. 
 
-Once again eliminate the blank entries notice how drastically the number of rows declines. You can use the gray oval to further filter the data. Let's change it to only show incidents that had over 100 missing persons. Now, you should only have a handful of records. 
+Once again eliminate the blank entries. Notice how drastically the number of rows declines. You can use the gray oval to further filter the data. Let's change it to only show incidents that had over 100 missing persons. Now, you should only have a handful of records. 
 
 ![Numeric Filter](images/image_10.png)
 
 **What similarities do these records have?** 
 
-**How could filters like this be valuable to humanitarian workers and journalist?**
+**How could filters like this be valuable to humanitarian workers and/or journalists?**
 
 ### Text Facet
-Notice that as we add additional facets, the previous ones remain in the facet/filter section. Let's remove our numeric and timeline facets before adding a text facet. To remove a facet, click the x in the top left corner of each individual facet. To this for both of your current facets. 
+Notice that as we add additional facets, the previous ones remain in the facet/filter section. Let's remove our numeric and timeline facets before adding a text facet. To remove a facet, click the x in the top left corner of each individual facet. Do this for both of your current facets. 
 
 The IOM Missing Migrants Project data is collected from a variety of sources. Let's facet by text on those sources to see which ones provide the most data. Find the #meta+source+name column (you will need to scroll over in your spreadsheet). Click the arrow, scroll over facet, and select Text Facet. 
 
