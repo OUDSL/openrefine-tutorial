@@ -37,7 +37,7 @@ You can download the OpenRefine software from [http://openrefine.org/download.ht
 
 ### Getting the Data
 The data we will be using comes from the [International Organization on Migration's Missing Migrants Project](https://missingmigrants.iom.int/). According to project's About page: 
-> IOM's Missing Migrants Project tracks deaths of migrants, including refugees and asylum-seekers, who have gone missing along mixed migration routes worldwide. The research behind this project began with the October 2013 tragedies, when at least 368 individuals died in two shipwrecks near the Italian island of Lampedusa. Since then, Missing Migrants Project has developed into an important hub and advocacy source of information that media, researchers, and the general public access for the latest information" [https://missingmigrants.iom.int/about](https://missingmigrants.iom.int/about). 
+> "IOM's Missing Migrants Project tracks deaths of migrants, including refugees and asylum-seekers, who have gone missing along mixed migration routes worldwide. The research behind this project began with the October 2013 tragedies, when at least 368 individuals died in two shipwrecks near the Italian island of Lampedusa. Since then, Missing Migrants Project has developed into an important hub and advocacy source of information that media, researchers, and the general public access for the latest information." [https://missingmigrants.iom.int/about](https://missingmigrants.iom.int/about). 
 
 The data is made accesible through a Creative Commons Attribution 4.0 International License. 
 
@@ -57,7 +57,7 @@ Open up the data to see what is in it. **What stands out to you that needs to be
 ## Creating a Project
 Open OpenRefine. It should open a browser window. If you look at the address bar at the top it should display 127.0.0.0.1:3333. This indicates that it is running on our local machine. You do not need to be connected to the internet to use OpenRefine. 
 
-To start a new project, select **Create Project** in the upper right corner. Notice that you can choose files from your computer, an URL, your clipboard, or Google Data. We want to choose a file from our computer. Click **Choose Files**, and select the MissingMigrants.xlsx file. Click **Next**.
+To start a new project, select **Create Project** in the upper right corner. Notice that you can choose files from your computer, a URL, your clipboard, or Google Data. We want to choose a file from our computer. Click **Choose Files**, and select the MissingMigrants.xlsx file. Click **Next**.
 
 ![Creating a project](images/image_02.png)
 
@@ -75,7 +75,7 @@ Once you are ready, click **Create Project** in the upper right next to the titl
 Let's take a few minutes to look at the interface. The OpenRefine window is divided into two sections separated by a light blue line. The smaller section on the left is for faceting and filtering. At the top of the section, there is a Undo/Redo tab. In addition to letting us undo/redo actions, this tab will also let export a list of changes so we can repeat them later. 
 ![first section](images/image_04.png)
 
-In the larger section, our data is displayed in a spreadsheet format. At the top, you should see that you have 2647 rows. Right below you can switch between rows and records. We will go into more details on this in the spilting cells section. You can also change to display to show up to 50 rows on the page. Go ahead and select 50 rows so we can see as much of our data as possible at once. 
+In the larger section, our data is displayed in a spreadsheet format. At the top, you should see that you have 2647 rows. Right below you can switch between rows and records. We will go into more details on this in the spliting cells section. You can also change to display to show up to 50 rows on the page. Go ahead and select 50 rows so we can see as much of our data as possible at once. 
 
 Hovering over a column header will reveal a down arrow. Clicking on this arrow will reveal the different editing options. We will explore the functionality of some but not all of these during this tutorial. 
 
@@ -87,7 +87,7 @@ Before we move on, I want to point out 3 buttons on the very top right corner of
 
 
 ## Data Types
-Data in OpenRefine is auto-sorted into one of three data types: text, numbers, or date. There are subtle color differences to indicate the different types - apologies to all the color-blind users. Looking at your table, you should see 4 columns with data in green. The #affected+missing, the #affected+dead, #geo+lat, and #geo+long. 
+Data in OpenRefine is auto-sorted into one of three data types: text, numbers, or date. There are subtle color differences to indicate the different types - apologies to our color-blind users. Looking at your table, you should see 4 columns with data in green. The #affected+missing, the #affected+dead, #geo+lat, and #geo+long. 
 
 Since each data types has some slightly different functionality, you may want to change the data type. As an example, we can change #date+reported to the date format. 
 
@@ -97,13 +97,13 @@ Click the down arrow by #date+reported. Scroll to **Edit cells**. Select **Commo
 
 ![transform data type](images/image_06.png)
 
-Now,the data in the date field is also green. A timestamp was also added, which doesn't really make sense for our data. However, it won't affect our analysis so we will just leave it as for now. We will want to change it back to a text before exporting it. 
+Now,the data in the date field is also green. A timestamp was also added, which doesn't really make sense for our data. However, it won't affect our analysis so we will just leave it for now. We will want to change it back to a text before exporting it. 
 
 [Return to Top](#about)
 
 ## Filters and Facets
 ### Timeline Facet
-We can use tools in OpenRefine to help us quickly better understand our data. OpenRefine has a several ways to facet our data, which can give help us identify potenital problems. Let's start with the #date+reported column we have just transformed. 
+We can use tools in OpenRefine to help us quickly better understand our data. OpenRefine has a several ways to facet our data, which can give help us identify potential problems. Let's start with the #date+reported column we have just transformed. 
 
 Click the down arrow next to #date+reported column scroll over **Facet** and select **Timeline facet**.
 
@@ -158,13 +158,13 @@ To designate the values you would like to consolidate, check the merge box. You 
 
 Work down the page and merge any values you think are the same. When you are done, click Merge Selected and Re-Cluster. 
 
-After you merge and re-cluster. Look at the top of the box, and you should see two downdown boxes - **Methods** and **Keying Function**. These run different clustering algorithms. Changing these will give you different potential matches. Try out some different options to see what clusters you would like to merge. All of the suggestions may not be valid so use your judgement. 
+After you merge and re-cluster. Look at the top of the box, and you should see two pulldown menus - **Methods** and **Keying Function**. These run different clustering algorithms. Changing these will give you different potential matches. Try out some different options to see what clusters you would like to merge. All of the suggestions may not be valid so use your judgement. 
 
 **What algorithms seem to work best for this data? Which are the least effective?**
 
-After you are finished merging the cluster you think should be combined. Exit the cluster dialog box. 
+After you are finished merging the cluster you think should be combined, exit the cluster dialog box. 
 
-After I finished clustering, there are 616 distinct values (remember it 659 before we clustered). Your number may differ based on merging decisions you made. 
+After I finished clustering, there are 616 distinct values (remember it was 659 before we clustered). Your number may differ based on merging decisions you made. 
 
 Let's repeat the process for another column. First, remove the text facet you have on #meta+source+name. Add a text facet to #cause+type. 
 
